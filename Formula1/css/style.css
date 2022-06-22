@@ -1,0 +1,247 @@
+/* Customs Properties */
+:root {
+    --rojo: #E10600;
+    --gris: #38383F;
+    --blanco: #FFFFFF;
+    --negro: #15151E;
+    --verde: #349829;
+    --colorfondo : #F3F3F3;
+    --amarillo : #D5AF1D;
+    --fuentePrincipal: 'Titillium Web', sans-serif;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+/* tomado de paulirish.com */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* permite que podamos usar rem y que 1 rem = 10px */
+
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--colorfondo);
+    font-family: var(--fuentePrincipal);
+}
+
+header {
+    background-color: var(--negro);
+    height: 5rem;
+    color: var(--blanco);
+}
+
+h1 {
+    margin-left: 5rem;
+    font-size: 3rem;
+    padding-top: 0.5rem;
+}
+
+.hero {
+    background-image: url(../img/pilots.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50rem;
+    margin-bottom: 0;
+}
+
+.nav-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--rojo);
+    height: 3rem;
+}
+
+.nav-container a {
+    color: var(--blanco);
+    font-size: 1.8rem;
+    text-decoration: none;
+}
+
+ 
+
+.nav-container a:hover {
+    background-color: var(--amarillo);
+    color: var(--negro);
+    padding: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+.contacts-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    height: 10rem;
+    background-color: var(--verde);
+    align-items: center;
+    gap: 2rem;
+}
+
+.contacts-container p {
+    color: var(--blanco);
+    font-size: 20px
+}
+
+.detail-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .contacts-container {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+.detail-contact p {
+    margin: 0px;
+}
+
+
+
+section h2 {
+    text-align: center;
+    color: var(--negro);
+    font-size: 3rem;
+}
+
+section h3 {
+    font-size: 2rem;
+}
+
+.motives {
+    display: flex;
+    flex-direction: row;        
+    gap: 2rem;
+}
+
+.motive{
+    text-align: center;
+}
+
+.motive p {
+    line-height: 2rem;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .motives {
+        flex-direction: column;
+    }
+
+}
+
+.info {
+    display: flex;
+    justify-content: space-evenly;    
+    background-color: var(--gris);
+    padding-bottom: 2rem;
+    margin-bottom: 0px;
+}
+
+@media (max-width: 768px) {
+    .info {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.info .submenu {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem    
+}
+
+.infoitem h2 {
+    color: var(--blanco);
+}
+
+.infoitem p {
+    font-size: 1.2rem;
+    color: var(--blanco);
+}
+
+.info .submenu a {
+    text-decoration: none;
+    color: var(--blanco);    
+    font-size: 1.2rem;
+}
+
+.info .submenu a:hover {    
+    color: var(--amarillo);    
+}
+
+.miniform {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer {
+    padding-top: .1rem;
+    padding-bottom: .1rem;
+    background-color: var(--negro);
+    color: var(--blanco);
+    height: 3rem;
+    text-align: center;
+}
+
+
+main h2 {
+    text-align: center;
+    color: var(--negro);
+    font-size: 3rem;
+}
+
+.circuitos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .circuitos{
+        grid-template-columns: 1fr 1fr;
+        row-gap: 4rem;
+    }
+    
+}
+.circuito img {
+    width: 70%;
+    height: 70%;    
+}
+
+.circuito {
+    align-items: center;
+    text-align: center;
+    color: var(--negro);
+    
+}
+
+.circuito .pais {
+    font-weight: 700;    
+    font-size: 1.5rem;
+}
+
+.circuito .fecha {    
+    font-weight: 400;    
+    font-size: 1.2rem;
+}
+
